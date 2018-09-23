@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 //         pageTitle: 'Now Under Maintenance...',
 //         pageContent: 'Sorry, this website is under mentainance...'
 //     })
-// })
+// });
 
 app.use(express.static(__dirname + '/public'));
 
@@ -67,6 +67,22 @@ app.get('/about', (req, res) => {
         //これはhbs.regsiterHelperで代替できる
         //currentYear: new Date().getFullYear()        
         //name: 'Tomo'
+    });
+});
+
+// app.get('/projects', (req, res) => {
+//     //res.send('About Page');
+//     res.render('projects.hbs',{
+//         pageTitle: 'About Page-project'
+//         //これはhbs.regsiterHelperで代替できる
+//         //currentYear: new Date().getFullYear()        
+//         //name: 'Tomo'
+//     });
+// });
+
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
     });
 });
 
