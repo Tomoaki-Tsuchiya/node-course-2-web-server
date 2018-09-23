@@ -31,12 +31,12 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req,res,next) => {
-    res.render('maintenance.hbs',{
-        pageTitle: 'Now Under Maintenance...',
-        pageContent: 'Sorry, this website is under mentainance...'
-    })
-})
+// app.use((req,res,next) => {
+//     res.render('maintenance.hbs',{
+//         pageTitle: 'Now Under Maintenance...',
+//         pageContent: 'Sorry, this website is under mentainance...'
+//     })
+// })
 
 app.use(express.static(__dirname + '/public'));
 
