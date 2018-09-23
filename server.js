@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+var port = process.env.PORT || 3000;
+
 var app = express();
 
 //registering paritals should be before app.set('view engine')
@@ -79,6 +81,6 @@ app.get('/bad', (req,res) => {
     });
 })
 
-app.listen(3000, () => {
-    console.log('app is listening...');
+app.listen(port, () => {
+    console.log(`app is listening... at ${port}`);
 });
